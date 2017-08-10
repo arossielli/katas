@@ -1,0 +1,20 @@
+A partir de un resultado de una consulta a Base de Datos donde hay dos tablas: Clientes y Pagos
+Realizar un listado donde se muestren todos los pagos (fechas) de los clientes de esta forma:
+cliente1    fecha1
+            fecha2
+            fecha3
+cliente2    fecha1
+            fecha2
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `pagos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` datetime DEFAULT NULL,
+  `idcliente` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
